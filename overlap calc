@@ -1,0 +1,23 @@
+//Popular camshafts offered by Texas Speed and Performance
+const cam1 = {
+  intakeDuration: 229,
+  exhaustDuration: 244,
+  lsa: 112,
+}
+const cam2 = {
+    intakeDuration: 231,
+    exhaustDuration: 246,
+    lsa: 111, 
+}
+const cam3 = {
+    intakeDuration: 235,
+  exhaustDuration: 248,
+  lsa: 111,
+}
+
+//Overlap Calculator works by using advertised intake and exhaust durations as well as LSA at 0.50 lift.
+function overlapCalc(a, b, c) {
+  return ((a + b) / 4 - c) * 2;
+}
+//output will be camshaft overlap in degrees
+console.log(overlapCalc(235, 248, 111));
